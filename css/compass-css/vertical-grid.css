@@ -74,14 +74,14 @@ html {
   line-height: 1.5em;
 }
 
-/* line 14, ../compass-sass/vertical-grid.sass */
+/* line 17, ../compass-sass/vertical-grid.sass */
 body {
   font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   background: #f3f3f3;
   color: #2c2c2c;
 }
 
-/* line 20, ../compass-sass/vertical-grid.sass */
+/* line 23, ../compass-sass/vertical-grid.sass */
 h1 {
   font-size: 2.8125em;
   line-height: 1.6em;
@@ -92,40 +92,85 @@ h1 {
   font-weight: 900;
 }
 
-/* line 25, ../compass-sass/vertical-grid.sass */
+/* line 28, ../compass-sass/vertical-grid.sass */
 h2 {
   font-size: 1.875em;
   line-height: 1.6em;
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0em;
   font-weight: 700;
 }
 
-/* line 29, ../compass-sass/vertical-grid.sass */
+/* line 33, ../compass-sass/vertical-grid.sass */
 h3 {
-  margin-top: 1.5em;
   font-size: 1.75em;
   line-height: 1.71429em;
+  margin-top: 0.85714em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0em;
   font-weight: 700;
 }
 
-/* line 35, ../compass-sass/vertical-grid.sass */
+/* line 39, ../compass-sass/vertical-grid.sass */
 p, blockquote {
   margin-top: 1.5em;
 }
 
-/* line 38, ../compass-sass/vertical-grid.sass */
+/* line 42, ../compass-sass/vertical-grid.sass */
+cite {
+  display: block;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+
+/* line 47, ../compass-sass/vertical-grid.sass */
 blockquote {
+  font-size: 1.25em;
+  line-height: 1.2em;
+  line-height: 1.5em;
+  font-weight: 300;
   border-left: 10px solid rgba(68, 68, 68, 0.24);
   padding-left: 1em;
   margin-left: 1em;
   margin-right: 1em;
 }
 
-/* line 44, ../compass-sass/vertical-grid.sass */
+/* line 56, ../compass-sass/vertical-grid.sass */
+hr {
+  line-height: 1.5em;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* line 60, ../compass-sass/vertical-grid.sass */
 strong {
   font-weight: 700;
 }
 
-/* line 47, ../compass-sass/vertical-grid.sass */
+/* line 63, ../compass-sass/vertical-grid.sass */
+ul {
+  margin-left: 1.5em;
+  margin-top: 1.5em;
+}
+/* line 67, ../compass-sass/vertical-grid.sass */
+ul li {
+  list-style-type: disc;
+}
+
+/* line 71, ../compass-sass/vertical-grid.sass */
+nav ul {
+  margin-left: 0;
+}
+/* line 73, ../compass-sass/vertical-grid.sass */
+nav ul li {
+  display: inline-block;
+  padding-right: 1em;
+}
+
+/* line 77, ../compass-sass/vertical-grid.sass */
 .container {
   *zoom: 1;
   max-width: 1012px;
@@ -142,22 +187,22 @@ strong {
   clear: both;
 }
 
-/* line 50, ../compass-sass/vertical-grid.sass */
+/* line 80, ../compass-sass/vertical-grid.sass */
 article {
-  width: 48.93617%;
+  width: 47.82609%;
   float: left;
-  margin-right: 2.12766%;
+  margin-right: 4.34783%;
   display: inline;
 }
-/* line 52, ../compass-sass/vertical-grid.sass */
+/* line 82, ../compass-sass/vertical-grid.sass */
 article:last-child {
-  width: 48.93617%;
+  width: 47.82609%;
   float: right;
   margin-right: 0;
   *margin-left: -44px;
   display: inline;
 }
-/* line 54, ../compass-sass/vertical-grid.sass */
+/* line 84, ../compass-sass/vertical-grid.sass */
 article p {
   margin-bottom: 4.5em;
 }

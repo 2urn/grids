@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-</html>
+<html>
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/bootstrap.css">
 </head>
 <body>
@@ -17,13 +19,13 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Project name</a>
+				<a class="navbar-brand" href="#">Bootstrap</a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
+					<li><a href="foundation.html">Foundation</a></li>
+					<li><a href="vertical-grid.html">Susy+Vertical Grid</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
 						<ul class="dropdown-menu">
@@ -47,41 +49,195 @@
 
 		<!-- Main component for a primary marketing message or call to action -->
 		<div class="jumbotron">
-			<h1>Navbar example</h1>
-			<p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+			<h1>Bootstrap example</h1>
+			<p>This example is a quick exercise to illustrate how the default, general bootstrap look/feel works. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
 			<p>
-				<a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+				<a class="btn btn-lg btn-primary" href="http://getbootstrap.com/css/" role="button">View Bootstrap Docs &raquo;</a>
 			</p>
 		</div>
 
 	</div> <!-- /container -->
 
 	<div class="container">
-		<!-- Example row of columns -->
 		<div class="row">
-			<div class="col-md-4">
-				<h2>Heading</h2>
-				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-				<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			<div class="col-md-12">
+				<h1 id="grid" class="page-header">Grid system</h1>
+
+				<p class="lead">Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes <a href="#grid-example-basic">predefined classes</a> for easy layout options, as well as powerful <a href="#grid-less">mixins for generating more semantic layouts</a>.</p>
+
+				<h3 id="grid-intro">Introduction</h3>
+				<p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+				<ul>
+					<li>Rows must be placed within a <code>.container</code> (fixed-width) or <code>.container-fluid</code> (full-width) for proper alignment and padding.</li>
+					<li>Use rows to create horizontal groups of columns.</li>
+					<li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+					<li>Predefined grid classes like <code>.row</code> and <code>.col-xs-4</code> are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</li>
+					<li>Columns create gutters (gaps between column content) via <code>padding</code>. That padding is offset in rows for the first and last column via negative margin on <code>.row</code>s.</li>
+					<li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three <code>.col-xs-4</code>.</li>
+				</ul>
+				<p><strong>Here is a handy table explaining the bootstrap grids.</strong></p>
 			</div>
-			<div class="col-md-4">
-				<h2>Heading</h2>
-				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-				<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-			</div>
-			<div class="col-md-4">
-				<h2>Heading</h2>
-				<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-				<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table table-bordered table-striped">
+						<thead>
+							<tr>
+								<th></th>
+								<th>
+									Extra small devices
+									<small>Phones (&lt;768px)</small>
+								</th>
+								<th>
+									Small devices
+									<small>Tablets (≥768px)</small>
+								</th>
+								<th>
+									Medium devices
+									<small>Desktops (≥992px)</small>
+								</th>
+								<th>
+									Large devices
+									<small>Desktops (≥1200px)</small>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Grid behavior</th>
+								<td>Horizontal at all times</td>
+								<td colspan="3">Collapsed to start, horizontal above breakpoints</td>
+							</tr>
+							<tr>
+								<th>Container width</th>
+								<td>None (auto)</td>
+								<td>750px</td>
+								<td>970px</td>
+								<td>1170px</td>
+							</tr>
+							<tr>
+								<th>Class prefix</th>
+								<td><code>.col-xs-</code></td>
+								<td><code>.col-sm-</code></td>
+								<td><code>.col-md-</code></td>
+								<td><code>.col-lg-</code></td>
+							</tr>
+							<tr>
+								<th># of columns</th>
+								<td colspan="4">12</td>
+							</tr>
+							<tr>
+								<th>Column width</th>
+								<td class="text-muted">Auto</td>
+								<td>60px</td>
+								<td>78px</td>
+								<td>95px</td>
+							</tr>
+							<tr>
+								<th>Gutter width</th>
+								<td colspan="4">30px (15px on each side of a column)</td>
+							</tr>
+							<tr>
+								<th>Nestable</th>
+								<td colspan="4">Yes</td>
+							</tr>
+							<tr>
+								<th>Offsets</th>
+								<td colspan="4">Yes</td>
+							</tr>
+							<tr>
+								<th>Column ordering</th>
+								<td colspan="4">Yes</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 
 		<hr>
 
+		<div class="row">
+			<div class="col-md-12">
+				<blockquote>
+					<p>The secret of a grid's success is not so much its structure as the imagination with which it is used.</p>
+					<footer>Someone famous by the name of <cite title="Source Title">Allen Hurlburt</cite></footer>
+				</blockquote>
+			</div>
+		</div>
+
+
+		<!-- Play below here -->
+		<section class="row">
+			<div class="col-md-8">
+				<h3>Heading of some kind</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, dignissimos, tempora, alias delectus quasi ut minus sunt aut eos quos sapiente quaerat assumenda dolor nemo a odit fugiat distinctio iure!</p>
+				<p>Harum, at, soluta, recusandae, expedita reprehenderit excepturi architecto enim provident ullam id atque consectetur assumenda quo velit numquam deleniti commodi reiciendis necessitatibus fuga eligendi nemo odio eius unde officia impedit.</p>
+				<p>Deserunt, atque, culpa eveniet excepturi esse quidem nobis tempora dolore obcaecati nisi facere dolor eum molestiae placeat distinctio nostrum alias fugiat? Unde, modi, maxime quaerat laudantium non eum possimus consequatur.</p>
+				<p>Reprehenderit, quam, suscipit, cum, provident quas laudantium quia odio fuga optio ducimus excepturi modi. Non nam nostrum quasi cum voluptas totam iusto corporis ad vero repellat. Nihil inventore sapiente iure.</p>
+				<hr>
+				<section class="row">
+					<div class="col-md-8">
+						<h3>Heading of some kind</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, dignissimos, tempora, alias delectus quasi ut minus sunt aut eos quos sapiente quaerat assumenda dolor nemo a odit fugiat distinctio iure!</p>
+						<blockquote>
+							<p>To say a grid is limiting is to say that language is limiting, or typography is limiting. It is up to us to use these media critically or passively. </p>
+							<footer><cite>Ellen Lupton</cite></footer>
+						</blockquote>
+						<p>Harum, at, soluta, recusandae, expedita reprehenderit excepturi architecto enim provident ullam id atque consectetur assumenda quo velit numquam deleniti commodi reiciendis necessitatibus fuga eligendi nemo odio eius unde officia impedit.</p>
+						<p>Deserunt, atque, culpa eveniet excepturi esse quidem nobis tempora dolore obcaecati nisi facere dolor eum molestiae placeat distinctio nostrum alias fugiat? Unde, modi, maxime quaerat laudantium non eum possimus consequatur.</p>
+						<p>Reprehenderit, quam, suscipit, cum, provident quas laudantium quia odio fuga optio ducimus excepturi modi. Non nam nostrum quasi cum voluptas totam iusto corporis ad vero repellat. Nihil inventore sapiente iure.</p>
+						<hr>
+						<section class="row">
+							<div class="col-md-6">
+								<h3>Heading of some kind</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, dignissimos, tempora, alias delectus quasi ut minus sunt aut eos quos sapiente quaerat assumenda dolor nemo a odit fugiat distinctio iure!</p>
+								<p>Harum, at, soluta, recusandae, expedita reprehenderit excepturi architecto enim provident ullam id atque consectetur assumenda quo velit numquam deleniti commodi reiciendis necessitatibus fuga eligendi nemo odio eius unde officia impedit.</p>
+							</div>
+							<div class="col-md-6">
+								<h3>Heading of some kind</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, dignissimos, tempora, alias delectus quasi ut minus sunt aut eos quos sapiente quaerat assumenda dolor nemo a odit fugiat distinctio iure!</p>
+								<p>Harum, at, soluta, recusandae, expedita reprehenderit excepturi architecto enim provident ullam id atque consectetur assumenda quo velit numquam deleniti commodi reiciendis necessitatibus fuga eligendi nemo odio eius unde officia impedit.</p>
+							</div>
+						</section>
+					</div>
+					<div class="col-md-4">
+						<h3>Heading of some kind</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, dignissimos, tempora, alias delectus quasi ut minus sunt aut eos quos sapiente quaerat assumenda dolor nemo a odit fugiat distinctio iure!</p>
+						<blockquote>
+							<p>The grid, like any other instrument in the design process, is not an absolute. It should be used with flexibility, and when necessary it should be modified or abandoned completely for a more workable solution. </p>
+							<footer><cite>Allen Hulburt</cite></footer>
+						</blockquote>
+						<p>Harum, at, soluta, recusandae, expedita reprehenderit excepturi architecto enim provident ullam id atque consectetur assumenda quo velit numquam deleniti commodi reiciendis necessitatibus fuga eligendi nemo odio eius unde officia impedit.</p>
+						<p>Deserunt, atque, culpa eveniet excepturi esse quidem nobis tempora dolore obcaecati nisi facere dolor eum molestiae placeat distinctio nostrum alias fugiat? Unde, modi, maxime quaerat laudantium non eum possimus consequatur.</p>
+						<p>Reprehenderit, quam, suscipit, cum, provident quas laudantium quia odio fuga optio ducimus excepturi modi. Non nam nostrum quasi cum voluptas totam iusto corporis ad vero repellat. Nihil inventore sapiente iure.</p>
+					</div>
+				</section>
+			</div>
+			<div class="col-md-4">
+				<h3>Heading of some kind</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, dignissimos, tempora, alias delectus quasi ut minus sunt aut eos quos sapiente quaerat assumenda dolor nemo a odit fugiat distinctio iure!</p>
+				<p>Harum, at, soluta, recusandae, expedita reprehenderit excepturi architecto enim provident ullam id atque consectetur assumenda quo velit numquam deleniti commodi reiciendis necessitatibus fuga eligendi nemo odio eius unde officia impedit.</p>
+
+				<blockquote>
+					<p>The grid system is an aid, not a guarantee. It permits a number of possible uses and each designer can look for a solution appropiate to his personal style. But one must learn how to use the grid; it is an art that requires practice.</p>
+					<footer><cite title="Source Title">Josef Muller-Brockman</cite></footer>
+				</blockquote>
+				<p>Reprehenderit, quam, suscipit, cum, provident quas laudantium quia odio fuga optio ducimus excepturi modi. Non nam nostrum quasi cum voluptas totam iusto corporis ad vero repellat. Nihil inventore sapiente iure.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, dignissimos, tempora, alias delectus quasi ut minus sunt aut eos quos sapiente quaerat assumenda dolor nemo a odit fugiat distinctio iure!</p>
+				<p>Harum, at, soluta, recusandae, expedita reprehenderit excepturi architecto enim provident ullam id atque consectetur assumenda quo velit numquam deleniti commodi reiciendis necessitatibus fuga eligendi nemo odio eius unde officia impedit.</p>
+				<p>Deserunt, atque, culpa eveniet excepturi esse quidem nobis tempora dolore obcaecati nisi facere dolor eum molestiae placeat distinctio nostrum alias fugiat? Unde, modi, maxime quaerat laudantium non eum possimus consequatur.</p>
+				<p>Reprehenderit, quam, suscipit, cum, provident quas laudantium quia odio fuga optio ducimus excepturi modi. Non nam nostrum quasi cum voluptas totam iusto corporis ad vero repellat. Nihil inventore sapiente iure.</p>
+
+			</div>
+		</section>
+		<!-- Play above here -->
+
 		<footer>
-			<p>&copy; Company 2013</p>
+			<p>&copy; 2urn 2013</p>
 		</footer>
 	</div> <!-- /container -->
-
 	
 </body>
+</html>
