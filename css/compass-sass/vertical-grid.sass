@@ -1,0 +1,55 @@
+@import "compass/reset"
+@import "compass/typography"
+@import "../../bower_components/susy/sass/susy"
+
++establish-baseline
+
+$base-font-size: 16px
+$base-line-height: 24px
+$total-columns: 6
+$column-width: 132px
+$gutter-width: 44px
+$grid-padding: $gutter-width
+
+body
+	font-family: 'Lato','Helvetica Neue','Helvetica','Arial', sans-serif
+	background: #F3F3F3
+	color: #2C2C2C
+	// +debug-vertical-alignment
+
+h1
+	+adjust-font-size-to(45px)
+	+rhythm(1, 0, 0, 0, 45px)
+	font-weight: 900
+
+h2
+	+adjust-font-size-to(30px, 2)
+	font-weight: 700
+
+h3
+	+leader(1)
+	+adjust-font-size-to(28px, 2)	
+	font-weight: 700
+
+
+p, blockquote
+	+leader(1)
+
+blockquote
+	border-left: 10px solid rgba(68, 68, 68, 0.24)
+	padding-left: 1em
+	margin-left: 1em
+	margin-right: 1em
+
+strong
+	font-weight: 700
+
+.container
+	+container
+
+article
+	+span-columns(6,12)
+	&:last-child
+		+span-columns(6 omega,12)
+	p
+		+trailer(3)
